@@ -35,35 +35,25 @@
 				</pluginRepository>
 			</pluginRepositories>
 		</profile>
-		<profile>
-			<id>properties</id>
-			<properties>
-				<release.scm.username>xxx</release.scm.username>
-				<release.scm.password>xxx</release.scm.password>
-				<nexus.username>xxx</nexus.username>
-				<nexus.password>xxx</nexus.password>
-			</properties>
-		</profile>
 	</profiles>
 	<activeProfiles>
 		<activeProfile>nexus</activeProfile>
-		<activeProfile>properties</activeProfile>
 	</activeProfiles>
 	<servers>
 		<server>
 			<id>nexus</id>
-			<username>${nexus.username}</username>
-			<password>${nexus.password}</password>
+			<username>xxx</username>
+			<password>xxx</password>
 		</server>
 		<server>
 			<id>releases</id>
-			<username>${nexus.username}</username>
-			<password>${nexus.password}</password>
+			<username>xxx</username>
+			<password>xxx</password>
 		</server>
 		<server>
 			<id>snapshots</id>
-			<username>${nexus.username}</username>
-			<password>${nexus.password}</password>
+			<username>xxx</username>
+			<password>xxx</password>
 		</server>
 	</servers>
 </settings>
