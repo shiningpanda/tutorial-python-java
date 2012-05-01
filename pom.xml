@@ -7,16 +7,47 @@
 	<version>0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
+	<scm>
+		<connection>scm:git:git://github.com/shiningpanda/tutorial-python-java.git</connection>
+		<developerConnection>scm:git:git@github.com:shiningpanda/tutorial-python-java.git</developerConnection>
+		<url>https://github.com/shiningpanda/tutorial-python-java</url>
+	</scm>
+
 	<build>
 		<pluginManagement>
 			<plugins>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>exec-maven-plugin</artifactId>
-					<version>1.2</version>
+					<version>1.2.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>buildnumber-maven-plugin</artifactId>
+					<version>1.0</version>
+					<executions>
+						<execution>
+							<!-- On pre-clean instead of validate as clean goal can call the setup.py 
+								that generates the version file -->
+							<phase>pre-clean</phase>
+							<goals>
+								<goal>create</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<!-- All the projects get the save revision -->
+						<getRevisionOnlyOnce>true</getRevisionOnlyOnce>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
 	</build>
 
 	<dependencyManagement>

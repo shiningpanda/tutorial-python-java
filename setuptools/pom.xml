@@ -25,6 +25,11 @@
 					<configuration>
 						<executable>python</executable>
 						<workingDirectory>${basedir}</workingDirectory>
+						<environmentVariables>
+							<VERSION>${project.version}</VERSION>
+							<BUILD_NUMBER>${buildNumber}</BUILD_NUMBER>
+							<TIMESTAMP>${timestamp}</TIMESTAMP>
+						</environmentVariables>
 					</configuration>
 					<executions>
 						<execution>
@@ -63,7 +68,7 @@
 								<skip>${maven.test.skip}</skip>
 								<arguments>
 									<argument>setup.py</argument>
-									<argument>test</argument>
+									<argument>nosetests</argument>
 								</arguments>
 							</configuration>
 						</execution>
@@ -76,9 +81,9 @@
 							<configuration>
 								<arguments>
 									<argument>setup.py</argument>
-									<argument>mregister</argument>
+									<argument>register</argument>
 									<argument>sdist</argument>
-									<argument>mupload</argument>
+									<argument>upload</argument>
 								</arguments>
 							</configuration>
 						</execution>
