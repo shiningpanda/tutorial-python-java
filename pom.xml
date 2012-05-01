@@ -59,8 +59,6 @@
 					<version>2.2.2</version>
 					<configuration>
 						<goals>deploy</goals>
-						<username>${release.scm.username}</username>
-						<password>${release.scm.password}</password>
 						<autoVersionSubmodules>true</autoVersionSubmodules>
 						<tagNameFormat>tutorial-python-java-@{project.version}</tagNameFormat>
 					</configuration>
