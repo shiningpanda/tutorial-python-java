@@ -3,7 +3,7 @@
 
 	<groupId>com.shiningpanda</groupId>
 	<artifactId>parent</artifactId>
-	<version>0.3-SNAPSHOT</version>
+	<version>0.3</version>
 	<packaging>pom</packaging>
 
 	<scm>

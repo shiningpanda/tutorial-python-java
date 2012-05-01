@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.shiningpanda</groupId>
 		<artifactId>setuptools</artifactId>
-		<version>0.3-SNAPSHOT</version>
+		<version>0.3</version>
 		<relativePath>../setuptools/pom.xml</relativePath>
 	</parent>
 
