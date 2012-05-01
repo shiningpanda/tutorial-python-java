@@ -3,6 +3,10 @@
 .settings
 .classpath
 target
+*.pyc
+*.egg
 *.egg-info
 nosetests.xml
 .coverage
+__version__.py
+TEST-nosetests.xml
