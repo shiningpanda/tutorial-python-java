@@ -4,7 +4,7 @@
 		<mirror>
 			<id>nexus</id>
 			<mirrorOf>*</mirrorOf>
-			<url>http://localhost:8081/nexus/content/groups/public</url>
+			<url>http://dev.shiningpanda.com/nexus/content/groups/public</url>
 		</mirror>
 	</mirrors>
 	<profiles>

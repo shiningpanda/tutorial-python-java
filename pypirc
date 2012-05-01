@@ -1,0 +1,13 @@
+[distutils]
+index-servers =
+    pypi
+    private
+
+[pypi]
+username:xxx
+password:xxx
+
+[private]
+repository:http://dev.shiningpanda.com/pypi
+username:xxx
+password:xxx
