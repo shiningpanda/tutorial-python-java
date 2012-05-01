@@ -13,6 +13,19 @@
 		<url>https://github.com/shiningpanda/tutorial-python-java</url>
 	</scm>
 
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Releases</name>
+			<url>http://dev.shiningpanda.com/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Snapshots</name>
+			<url>http://dev.shiningpanda.com/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -38,6 +51,17 @@
 					<configuration>
 						<!-- All the projects get the save revision -->
 						<getRevisionOnlyOnce>true</getRevisionOnlyOnce>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.2.2</version>
+					<configuration>
+						<goals>deploy</goals>
+						<username>${release.scm.username}</username>
+						<password>${release.scm.password}</password>
+						<tagNameFormat>tutorial-python-java@{project.version}</tagNameFormat>
 					</configuration>
 				</plugin>
 			</plugins>
