@@ -61,7 +61,8 @@
 						<goals>deploy</goals>
 						<username>${release.scm.username}</username>
 						<password>${release.scm.password}</password>
-						<tagNameFormat>tutorial-python-java@{project.version}</tagNameFormat>
+						<autoVersionSubmodules>true</autoVersionSubmodules>
+						<tagNameFormat>tutorial-python-java-@{project.version}</tagNameFormat>
 					</configuration>
 				</plugin>
 			</plugins>
